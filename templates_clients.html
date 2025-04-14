@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Clients</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>ID Number</th>
+            <th>Mobile Number</th>
+            <th>Residence</th>
+            <th>Business Type</th>
+            <th>Business Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for client in clients %}
+        <tr>
+            <td>{{ client.name }}</td>
+            <td>{{ client.id_number }}</td>
+            <td>{{ client.mobile_number }}</td>
+            <td>{{ client.residence }}</td>
+            <td>{{ client.business_type }}</td>
+            <td>{{ client.business_location }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
